@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+img {
+    width: 100vw;
+}
+
+
+@keyframes ship-bob {
+	0% {
+		transform:translateY(0);
+	}
+	50% {
+		transform:translateY(-30px);
+	}
+	100% {
+		transform:translateY(0);
+	}
+}
+
+
+@keyframes ship-rotate {
+	0% {
+		transform:rotate(0deg);
+	}
+    50% {
+		transform:rotate(5deg);
+	}
+	100% {
+		transform:rotate(0deg);
+	}
+}
+
+.Ship {
+    animation: ship-bob 4s ease-in-out infinite, ship-rotate 4s ease-in-out infinite;
+    transform-origin: bottom center;
+
+}
+
+@keyframes wave-B {
+    0% {
+        transform:translateY(0);
+    }
+    50% {
+        transform:translateY(30px)translateX(10px);
+    }
+    100% {
+        transform:translateY(0);
+    }
+    
+}
+
+.Wave-B {
+    animation: wave-B 4s ease-in-out infinite;
+
+}
+
+
+.Wave-M {
+    animation: wave-M 4s ease-in-out infinite;
+
+}
+
+@keyframes wave-M {
+    0% {
+        transform:translateY(0);
+    }
+    50% {
+        transform:translateY(-30px)translateX(-10px);
+    }
+    100% {
+        transform:translateY(0);
+    }
+    
+}
+
+.Wave-T {
+    animation: wave-T 4s ease-in-out infinite, wave-opacity 3s ease-in-out infinite;
+}
+
+
+
+@keyframes wave-T {
+    0% {
+        transform:translateY(0);
+    }
+    50% {
+        transform:translateY(-50px);
+    }
+    100% {
+        transform:translateY(0);
+    }
+    
+}
+
+@keyframes wave-opacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .1;
+  }
+  50% {
+    opacity: .6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.Cloud-3 {
+    opacity: 0.4;
+}
+
+
+.Cloud-2 {
+    opacity: 0.2;
+}
+
+.Cloud-1 {
+    opacity: 0.1;
+}
+
+@keyframes whale-jump {
+     0% {
+        transform:translateY(0)rotate(-5deg);
+    }
+   50% {
+     transform:translateY(-400px)rotate(30deg);
+    }
+      50% {
+     transform:translateY(-400px)rotate(30deg);
+    }
+
+    100% {
+        transform:translateY(0)rotate(60deg);
+    }
+    
+} 
+
+.Whale {
+    animation: whale-jump 5s ease-in-out infinite;
+    transform-origin: bottom;
+}
+
+
+
+
+
+
